@@ -1,5 +1,5 @@
  #!/bin/bash
-export LMUData="/mnt/tidal-alsh01/dataset/perceptionVLM/benchmark/"
+export LMUData=""
 
 MODELS=(
     "Qwen3-VL-8B-Instruct_Grounding"
@@ -7,8 +7,7 @@ MODELS=(
 )
 
 datasets=(
-    "refdrone_test_sample"
-    # 'refdrone_test'
+    'refdrone_test'
 )
 
 for MODEL in "${MODELS[@]}"; do

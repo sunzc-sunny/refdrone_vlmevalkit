@@ -1463,7 +1463,7 @@ qwen3vl_series = {
     ),
     "Qwen3-VL-8B-Instruct_Grounding": partial(
         vlm.Qwen3VLChat,
-        model_path="/mnt/tidal-alsh01/dataset/perceptionVLM/models/models--Qwen--Qwen3-VL-8B-Instruct",
+        model_path="Qwen/Qwen3-VL-8B-Instruct",
         use_custom_prompt=True,
         use_vllm=False,
         temperature=0.7, 
