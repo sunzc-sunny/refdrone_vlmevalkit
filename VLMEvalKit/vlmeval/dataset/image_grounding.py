@@ -186,7 +186,7 @@ class Grounding_RefDrone(ImageBaseDataset):
     TYPE = 'VG'
 
     DATASET_URL = {
-        'refdrone_test': '/mnt/tidal-alsh01/dataset/perceptionVLM/benchmark/refdrone_test_base64.tsv',
+        'refdrone_test': 'refdrone_test_base64.tsv',
     }
 
     def load_data(self, dataset):

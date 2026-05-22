@@ -76,8 +76,25 @@ pip install git+https://github.com/huggingface/transformers
 
 ## 数据集配置
 
-1. 将 RefDrone 数据集放置到 `LMUData` 目录下
-2. 在 [image_grounding.py](VLMEvalKit/vlmeval/dataset/image_grounding.py) 中修改数据集路径为实际路径
+**步骤 1：下载测试集**
+
+从 HuggingFace 下载 TSV 格式的测试集（图像以 base64 编码内嵌）：
+
+```
+https://huggingface.co/datasets/sunzc-sunny/RefDrone/blob/main/refdrone_test_base64.tsv
+```
+
+将下载好的 `refdrone_test_base64.tsv` 放置到 `LMUData` 目录下。
+
+**步骤 2：配置数据集路径**
+
+在 [image_grounding.py](VLMEvalKit/vlmeval/dataset/image_grounding.py) 中确认 `DATASET_URL` 配置与文件名一致：
+
+```python
+DATASET_URL = {
+    'refdrone_test': 'refdrone_test_base64.tsv',
+}
+```
 
 ---
 
